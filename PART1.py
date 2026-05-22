@@ -1,0 +1,15 @@
+import numpy as np
+import pandas as pd
+df= pd.read_csv('student_scores.csv')
+array = np.array(df['math_score'])
+print(array)
+mean = np.mean(array)
+print(mean)                 
+median = np.median(array)
+print(median)
+maximum = np.max(array)
+print(maximum)
+minimum = np.min(array)
+print(minimum)
+normalized_array = (array - minimum) / (maximum - minimum)
+print(normalized_array) 
